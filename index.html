@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather Forecast</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="styles/styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://unpkg.com/axios@1.1.2/dist/axios.min.js"></script>
+    <script
+      src="https://kit.fontawesome.com/ce59389fa7.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="page-title">
+        <h1>Weather Forecast</h1>
+      </div>
+      <div class="main-content-box">
+        <div class="form">
+          <form id="city-search-form">
+            <input
+              type="text"
+              placeholder="Type a city name..."
+              autocomplete="off"
+              autofocus="on"
+              id="city-input"
+            />
+            <input type="submit" value="Search" />
+          </form>
+          <div class="current-location-btn">
+            <button id="current-location-button">Current location</button>
+          </div>
+        </div>
+        <div class="city-date-time">
+          <span id="show-date">Monday, 22/05/23</span>
+          <br />
+          <span id="show-time">15:48</span>
+          <br />
+        </div>
+        <div class="city-name">
+          <h2 id="city-search-result">Blumenau<br /></h2>
+        </div>
+        <div>
+          <p id="city-current-temperature">28˚C<br /></p>
+        </div>
+        <div class="city-max-min-current-temperature">
+          <span>Max: 22˚C</span>
+          <br />
+          <span>Min: 16˚C</span>
+        </div>
+        <div class="city-current-weather-data">
+          <div class="row">
+            <div class="col">
+              <i class="fa-solid fa-umbrella"></i> Precipitation: 2%
+            </div>
+            <div class="col">
+            <div><i class="fa-solid fa-water"></i> Humidity: 50%</div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col">
+              <i class="fa-solid fa-wind"></i> Wind: 10km/h</li>
+            </div>
+            <div><i class="fa-solid fa-cloud-sun"></i> Weather Description: sunny</div>
+          </div>
+        </div>
+      </div>
+
+      <span>Coming 5-days-forecast</span>
+      <hr />
+      <div class="container text-center coming-forecast">
+        <div class="row">
+          <div class="col">Mon</div>
+          <div class="col">Tue</div>
+          <div class="col">Wed</div>
+          <div class="col">Thu</div>
+          <div class="col">Fri</div>
+        </div>
+        <div class="row">
+          <div class="col">24˚C</div>
+          <div class="col">26˚C</div>
+          <div class="col">28˚C</div>
+          <div class="col">25˚C</div>
+          <div class="col">24˚C</div>
+        </div>
+        <div class="row">
+          <div class="col">20˚C</div>
+          <div class="col">22˚C</div>
+          <div class="col">23˚C</div>
+          <div class="col">20˚C</div>
+          <div class="col">21˚C</div>
+        </div>
+        <div class="row">
+          <div class="col"><i class="fa-solid fa-cloud icon"></i></div>
+          <div class="col"><i class="fa-solid fa-cloud-sun-rain icon"></i></div>
+          <div class="col"><i class="fa-regular fa-sun icon"></i></div>
+          <div class="col">
+            <i class="fa-solid fa-cloud-showers-heavy icon"></i>
+          </div>
+          <div class="col"><i class="fa-solid fa-cloud-sun icon"></i></div>
+        </div>
+      </div>
+      <div class="page-footer">
+        <footer>
+          <p>
+            This app was coded by <a href="">Amanda Cristina Blankenburg</a>and
+            is open-sourced on
+            <a href="">GitHub</a>
+          </p>
+        </footer>
+      </div>
+    </div>
+    <script src="src/index.js"></script>
+  </body>
+</html>
