@@ -1,0 +1,55 @@
+body {
+  background-color: rgb(223, 203, 203);
+}
+
+.container {
+  max-width: 900px;
+  margin-top: 150px;
+  background-color: rgb(214, 183, 243);
+}
+
+.form #city-search-form {
+  text-align: center;
+  padding-top: 60px;
+  max-width: 100%;
+}
+
+.form #city-input {
+  width: 50%;
+}
+
+.search-result {
+  font-size: 50px;
+  text-align: center;
+}
+
+.wrapped-row {
+  border: 1px solid rgb(150, 138, 138);
+  padding: 40px;
+  margin: 60px;
+  border-radius: 20px;
+  background-color: aliceblue;
+}
+
+.city-current-weather-data ul {
+  font-size: 28px;
+  text-align: center;
+  list-style: none;
+  text-transform: capitalize;
+}
+
+.coming-forecast-title {
+  text-align: center;
+  margin-bottom: 10px;
+  font-size: 24px;
+}
+
+#forecast {
+  margin-top: 40px;
+  margin-bottom: 60px;
+}
+
+.page-footer {
+  text-align: center;
+  padding-bottom: 20px;
+}
