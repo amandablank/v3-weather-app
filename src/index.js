@@ -157,3 +157,5 @@ function changeTheme(description) {
     body.classList.add("bg-default");
   }
 }
+
+getCurrentPosition();

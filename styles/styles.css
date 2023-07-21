@@ -1,6 +1,6 @@
 .container {
   max-width: 800px;
-  margin-top: 30px;
+  margin-top: 10px;
   margin-bottom: 15px;
   background-color: rgba(255, 255, 255, 0.7);
   border-radius: 10px;
@@ -24,7 +24,7 @@
 
 .form #city-search-form {
   text-align: center;
-  padding-top: 40px;
+  padding-top: 20px;
   max-width: 100%;
 }
 
@@ -66,8 +66,8 @@
 }
 
 #forecast {
-  margin-top: 40px;
-  margin-bottom: 40px;
+  margin-top: 20px;
+  margin-bottom: 20px;
   border-radius: 10px;
   padding-top: 20px;
   padding-bottom: 10px;
@@ -76,7 +76,7 @@
 
 .page-footer {
   text-align: center;
-  padding-bottom: 30px;
+  padding-bottom: 10px;
 }
 
 .bg-clear-sky {
