@@ -18,6 +18,12 @@
       href="https://fonts.googleapis.com/css2?family=Poppins&display=swap"
       rel="stylesheet"
     />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins&family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
     <script src="https://unpkg.com/axios@1.1.2/dist/axios.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.4/moment-with-locales.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment-timezone/0.5.42/moment-timezone-with-data-1970-2030.min.js"></script>
@@ -26,7 +32,7 @@
       crossorigin="anonymous"
     ></script>
   </head>
-  <body>
+  <body class="bg-default">
     <div class="container">
       <div class="form">
         <form id="city-search-form">
@@ -45,26 +51,23 @@
         </form>
       </div>
       <div class="row wrapped-row">
-        <div class="col-5 search-result">
-          <div class="city-name">
-            <p id="city-search-result">&nbsp;</p>
+        <div class="search-result">
+          <p id="city-search-result">&nbsp;</p>
+        </div>
+        <div class="col-6">
+          <div class="current-temperature">
             <p id="city-current-temperature">&nbsp;</p>
+            <p id="maximum">&nbsp;</p>
+            <p id="minimum">&nbsp;</p>
           </div>
         </div>
-        <div class="col-7">
-          <div class="city-current-weather-data">
-            <ul>
-              <li id="description">&nbsp;</li>
-              <li id="maximum">&nbsp;</li>
-              <li id="minimum">&nbsp;</li>
-            </ul>
+        <div class="col-6">
+          <div class="weather-description">
+            <br />
+            <p id="description">&nbsp;</p>
           </div>
         </div>
       </div>
-      <div class="coming-forecast-title">
-        <span>Next days forecast</span>
-      </div>
-      <hr />
       <div class="container text-center" id="forecast">
         <div class="row">
           <div class="col">&nbsp;</div>
@@ -98,9 +101,14 @@
       <div class="page-footer">
         <footer>
           <p>
-            This app was coded by <a href="">Amanda Cristina Blankenburg</a>and
-            is open-sourced on
-            <a href="">GitHub</a>
+            This app was coded by
+            <a
+              href="https://www.linkedin.com/in/amandablankenburg/"
+              target="_blank"
+              >Amanda Cristina Blankenburg</a
+            >
+            and is open-sourced on
+            <a href="https://github.com/amandablank" target="_blank">GitHub</a>
           </p>
         </footer>
       </div>

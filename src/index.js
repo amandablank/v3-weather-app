@@ -7,7 +7,6 @@ function getForecast(city) {
 }
 
 function displayTemp(response) {
-  console.log(response);
   let celsiusTemperature = Math.round(response.data.temperature.current);
   let temp = document.querySelector("#city-current-temperature");
   temp.innerHTML = `${celsiusTemperature}˚C`;
@@ -15,19 +14,23 @@ function displayTemp(response) {
   let currentCity = document.querySelector("#city-search-result");
   currentCity.innerHTML = response.data.city;
 
+  let description = response.data.condition.description;
+  //turn first letter uppercase
+  description = description.charAt(0).toUpperCase() + description.slice(1);
+
   let weatherDescription = document.querySelector("#description");
   weatherDescription.innerHTML = `<img
             src="${response.data.condition.icon_url}"
             alt="${response.data.condition.icon}"
-            width="80"
-          />${response.data.condition.description}`;
+            width="120"
+          />${description}`;
 
   //let weatherIcon = document.querySelector("#icon");
   //weatherIcon.setAttribute("src", `${response.data.condition.icon_url}`);
   //weatherIcon.setAttribute("alt", response.data.condition.description);
 
   getForecast(response.data.city);
-  updateDate(response.data.time);
+  changeTheme(response.data.condition.description);
 }
 
 function searchLocation(city) {
@@ -133,3 +136,24 @@ function getCurrentPosition(event) {
 
 let locationButton = document.querySelector("#local-timezone");
 locationButton.addEventListener("click", getCurrentPosition);
+
+function changeTheme(description) {
+  let body = document.querySelector("body");
+
+  body.classList = [];
+  if (description.includes("clear")) {
+    body.classList.add("bg-clear-sky");
+  } else if (description.includes("clouds")) {
+    body.classList.add("bg-clouds");
+  } else if (description.includes("rain")) {
+    body.classList.add("bg-rain");
+  } else if (description.includes("thunderstorm")) {
+    body.classList.add("bg-thunderstorm");
+  } else if (description.includes("snow")) {
+    body.classList.add("bg-snow");
+  } else if (description.includes("mist")) {
+    body.classList.add("bg-mist");
+  } else {
+    body.classList.add("bg-default");
+  }
+}
