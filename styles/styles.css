@@ -8,6 +8,20 @@
   font-family: "Roboto", sans-serif;
 }
 
+@media (min-width: 300px) {
+  #city-search-result {
+    font-size: 50px;
+    text-align: center;
+  }
+}
+
+@media (min-width: 900px) {
+  #city-search-result {
+    font-size: 60px;
+    text-align: center;
+  }
+}
+
 .form #city-search-form {
   text-align: center;
   padding-top: 40px;
